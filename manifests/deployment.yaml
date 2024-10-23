@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zzx-6563a38c-618f-48c0-ab15-46221fdfac9f-deployment
+  labels:
+    app: zzx-6563a38c-618f-48c0-ab15-46221fdfac9f
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zzx-6563a38c-618f-48c0-ab15-46221fdfac9f
+  template:
+    metadata:
+      labels:
+        app: zzx-6563a38c-618f-48c0-ab15-46221fdfac9f
+    spec:
+      containers:
+        - name: zzx-6563a38c-618f-48c0-ab15-46221fdfac9f-container
+          image: pipejet/lyna-zzx:0
+          ports:
+            - containerPort: 8080
